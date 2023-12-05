@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+i{
+    color: white;
+}
+
 hr{
     display: none;
 }
@@ -23,15 +27,16 @@ html{
 
 .nav-bar{
     width: 10%;
-    height: 100vh;
-    border: 1px solid red;
+    height: calc(100vh - 50px);
+    border: 1px solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5px;
+    padding: 10px 5px 0px 5px;
     overflow: auto;
     background-color: black;
+    gap: 50px;
 }
 
 
@@ -116,7 +121,6 @@ main{
     flex-direction: column;
     gap: 30px;
 }
-
 
 
 
@@ -248,9 +252,7 @@ main{
 }
 
 
-
 /* start artist section */
-
 
 
 
@@ -300,18 +302,161 @@ main{
 
 
 
+/* footer section */
 
 
 
 
+footer{
+    height: 50px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #282828;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 2px;
+}
 
 
 
+/* left */
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+
+.left div h6{
+    color: grey;
+}
 
 
 
+.left figure img{
+    width: 100%;
+}
+
+.left figure{
+    width: 25px;
+    display: flex;
+    align-items: center;
+}
 
 
+
+.info-song{
+    display: flex;
+    gap: 5px;
+}
+
+
+.info-song div{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+
+
+.fllw-file{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    display: none;
+}
+
+
+
+/* center */
+
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    width: 80%;
+}
+
+
+.function{
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+
+.bar{
+    display: flex;
+    width: 100%;
+}
+
+.bar span{
+    color: white;
+    font-size: 10px;
+}
+
+.line{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.line hr:first-child{
+    border: 2px solid #5A5A5A;
+    width: 100%;
+    display: block;
+}
+
+
+.line hr:last-child{
+    display: block;
+    position: absolute;
+    border: 2px solid #C8C8C8;
+    top: 5;
+    width: 30%;
+}
+
+
+
+/* right */
+
+.right{
+    
+    display: flex;
+    display: none;
+    gap: 5px;
+    width: 150px;
+    align-items: center;
+}
+
+.line2{
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+
+.right div hr:first-child{
+    border: 2px solid #5A5A5A;
+    width: 100%;
+    display: block;
+}
+
+
+.right div hr:last-child{
+    display: block;
+    position: absolute;
+    border: 2px solid #C8C8C8;
+    top: 5;
+    width: 30%;
+}
 
 
 
@@ -421,10 +566,18 @@ main{
 }
 
 
+
+/* footer */
+
+
+footer{
+    justify-content: flex-start;
+    gap: 10%;
 }
 
 
 
+}
 
 
 
@@ -443,6 +596,9 @@ main{
         font-size: small;
     }
 
+
+    
+
     .song div{
         flex-basis: calc((100%/4) - (10px));
     }
@@ -460,16 +616,51 @@ main{
         flex-basis: calc((100%/4) - (10px));
     }
 
+
+    /* start footer section */
+
+    footer{
+        justify-content: space-around;
+    }
+
+
+    .center{
+        width: 45%;
+    }
+
+    .function{
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .line{
+        width: 100%;
+    }
+
+    .bar{
+        gap: 10px;
+    }
+
+    .right{
+        display: flex;
+    }
+
+    .fllw-file{
+        display: flex;
+    }
+
+
+    .fllw-file i{
+        color: grey;
+    }
+
 }
 
 
 
 
-
-
-
-
 @media screen and (min-width: 801px){
+   
     a{
         font-size: 18px;
     }
@@ -477,12 +668,11 @@ main{
     .nav-bar{
         width: 300px;
         padding-left:25px;
+        height: calc(100vh - 65px);
     }
 
-
-
     i{
-        font-size: 30px;
+        font-size: 25px;
     }
 
 
@@ -496,12 +686,20 @@ main{
         padding: 15px 40px;
     }
 
+    .type ul li a{
+        font-size: 20px;
+    }
+
+    .type ul{
+        gap: 40px;
+    }
+
     .song div{
         flex-basis: calc((100%/6) - (10px));
     }
 
     .song div:nth-child(2) h4{
-        font-size: initial;
+        font-size: 15px;
     }
 
 
@@ -512,9 +710,42 @@ main{
 
 
     /* start artist section */
+
+    footer{
+        height: 70px;
+        padding: 15px 0px 15px 0px;
+        position: fixed;
+    }
     
     .card-artist div{
         flex-basis: calc((100%/6) - (10px));
     }
+
+    footer i{
+        font-size: 25px;
+    }
+
+
+    .function{
+        justify-content: space-between;
+    }
+
+
+    .left figure{
+        height: 100%;
+    }
+
+
+    .info-song{
+        height: 100%;
+        align-items: center;
+    }
+
+    .left{
+        height: 100%;
+    }
+
+
+
 
 }
