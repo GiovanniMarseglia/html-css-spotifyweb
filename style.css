@@ -42,7 +42,22 @@ html{
 
 .nav-bar a{
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.849);
+    color: grey;
+}
+
+
+.nav-top figure+a {
+    color: white;
+}
+
+
+.nav-bar a:hover{
+    color: white;
+}
+
+
+.fa-magnifying-glass, .fa-lines-leaning{
+    color: grey;
 }
 
 
@@ -116,6 +131,11 @@ main{
 }
 
 
+.main-header a:hover{
+    scale: 110%;
+}
+
+
 .main{
     display: flex;
     flex-direction: column;
@@ -129,6 +149,7 @@ main{
     background-color: #141922;
     justify-content: center;
 }
+
 
 .type ul{
     display: flex;
@@ -148,6 +169,23 @@ main{
 }
 
 
+.type ul li:first-child{
+    background-image: linear-gradient(green, green);
+    background-repeat: no-repeat;
+    background-size: 30px 10%;
+    background-position: bottom;
+    height: 25px;
+}
+
+
+.type ul li a:hover{
+    color: rgba(255, 255, 255, 0.658);
+}
+
+
+
+
+
 .recently{
     color: white;
     display: flex;
@@ -164,6 +202,8 @@ main{
 
 .recently figure{
  width: 100%;   
+ position: relative;
+
 }
 
 
@@ -182,6 +222,26 @@ main{
     flex-basis: calc((100%/2) - (10px));
     text-align: center; 
     gap: 10px;
+}
+
+.song div a:hover + i{
+    display: flex;
+}
+
+.song div a:hover{
+    filter: grayscale(80%);
+}
+
+
+
+.song div figure i{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 300%;
+    pointer-events: none;
 }
 
 
@@ -335,6 +395,11 @@ footer{
     color: grey;
 }
 
+.left div h6:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 
 
 .left figure img{
@@ -368,6 +433,11 @@ footer{
     flex-direction: column;
     gap: 2px;
     display: none;
+}
+
+
+.fllw-file i:first-child:hover{
+    color: white;
 }
 
 
@@ -409,19 +479,52 @@ footer{
 }
 
 .line hr:first-child{
-    border: 2px solid #5A5A5A;
+    border: 3px solid #5A5A5A;
     width: 100%;
     display: block;
+    border-radius: 50px;
 }
 
 
-.line hr:last-child{
+.line hr:nth-child(2){
     display: block;
     position: absolute;
-    border: 2px solid #C8C8C8;
+    border: 3px solid #C8C8C8;
     top: 5;
     width: 30%;
+    border-radius: 50px;
 }
+
+.line hr:nth-child(2):hover{
+    border:3px solid greenyellow;
+}
+
+.line hr:nth-child(2):hover + .circle{
+    display: flex;
+}
+
+
+.circle{
+    display: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    left: 29%;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -440,22 +543,45 @@ footer{
     display: flex;
     width: 100%;
     position: relative;
+    align-items: center;
 }
 
 
 .right div hr:first-child{
-    border: 2px solid #5A5A5A;
+    border: 3px solid #5A5A5A;
     width: 100%;
     display: block;
+    border-radius: 50px;
+    position: absolute;
 }
 
 
-.right div hr:last-child{
+.right div hr:nth-child(2){
     display: block;
     position: absolute;
-    border: 2px solid #C8C8C8;
+    border: 3px solid #C8C8C8;
     top: 5;
     width: 30%;
+    border-radius: 50px;
+}
+
+.right hr:nth-child(2):hover{
+    border:3px solid greenyellow;
+}
+
+.line2 hr:nth-child(2):hover + .circle2{ 
+    display: flex;
+}
+
+.circle2{
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    left: 20%;
 }
 
 
@@ -633,6 +759,10 @@ footer{
         gap: 25px;
     }
 
+    .function .fa-circle-play:hover{
+        scale: 120%;
+    }
+
     .line{
         width: 100%;
     }
@@ -698,6 +828,14 @@ footer{
 
     .type ul{
         gap: 40px;
+    }
+
+    .type ul li:first-child{
+        background-image: linear-gradient(green, green);
+        background-repeat: no-repeat;
+        background-size: 70px 10%;
+        background-position: bottom;
+        height: 40px;
     }
 
     .song div{
