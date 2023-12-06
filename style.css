@@ -91,8 +91,8 @@ main{
     width: 100%;
     background-color: #141922;
     overflow: auto;
-    height: 100vh;
-    
+    height: calc(100vh - 40px);
+    padding-bottom: 30px;
 }
 
 .main-header{
@@ -684,6 +684,12 @@ footer{
         margin-right: 2%;
         font-size: large;
         padding: 15px 40px;
+    }
+
+
+    main{
+        height: calc(100vh - 60px);
+        padding-bottom: 30px;
     }
 
     .type ul li a{
