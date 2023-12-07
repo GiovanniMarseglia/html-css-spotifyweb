@@ -40,6 +40,16 @@ html{
 }
 
 
+
+.nav-bar{
+        background-image: linear-gradient(rgb(140, 223, 45), rgb(140, 223, 45));
+        background-repeat: no-repeat;
+        background-size: 2px 20px;
+        background-position: top left;
+        background-position-y: 35px;
+}
+
+
 .nav-bar a{
     text-decoration: none;
     color: grey;
@@ -170,7 +180,7 @@ main{
 
 
 .type ul li:first-child{
-    background-image: linear-gradient(green, green);
+    background-image: linear-gradient(rgb(140, 223, 45), rgb(140, 223, 45));
     background-repeat: no-repeat;
     background-size: 30px 10%;
     background-position: bottom;
@@ -588,6 +598,30 @@ footer{
 
 
 
+@media screen and (min-width: 301px) and (max-width:499px){
+
+    .nav-top figure:nth-child(2){
+        width: 65px;
+       
+    }
+
+    .nav-middle a{
+        font-size: 10px;
+    }
+
+    .nav-middle a span{
+        scale: 2px;
+    }
+
+}
+
+
+
+
+
+
+
+
 @media screen and (min-width: 301px){
 
     a{
@@ -598,11 +632,18 @@ footer{
     .nav-bar{
         width: 40%;
         padding: 20px 10px 10px 10px;
+        align-items: flex-start;
     }
 
 
     .nav-bar{
-        align-items: flex-start;
+        
+            background-image: linear-gradient(rgb(140, 223, 45), rgb(140, 223, 45));
+            background-repeat: no-repeat;
+            background-size: 3px 20px;
+            background-position: top left;
+            background-position-y: 11%;
+    
     }
 
 
@@ -631,6 +672,7 @@ footer{
 
     .nav-top figure:nth-child(2){
         display: block;
+       
     }
 
 
@@ -712,6 +754,14 @@ footer{
         width: 40%;
         padding: 20px 10px 10px 10px;
     }
+
+    .nav-bar{
+        background-image: linear-gradient(rgb(140, 223, 45), rgb(140, 223, 45));
+        background-repeat: no-repeat;
+        background-size: 3px 20px;
+        background-position: top left;
+        background-position-y: 76px;
+}
 
     .main-header{
         height: 70px;
@@ -801,6 +851,14 @@ footer{
         height: calc(100vh - 65px);
     }
 
+    .nav-bar{
+        background-image: linear-gradient(rgb(140, 223, 45), rgb(140, 223, 45));
+        background-repeat: no-repeat;
+        background-size: 4px 40px;
+        background-position: top left;
+        background-position-y: 80px;
+}
+
     i{
         font-size: 25px;
     }
@@ -831,7 +889,7 @@ footer{
     }
 
     .type ul li:first-child{
-        background-image: linear-gradient(green, green);
+        background-image: linear-gradient(rgb(140, 223, 45), rgb(140, 223, 45));
         background-repeat: no-repeat;
         background-size: 70px 10%;
         background-position: bottom;
