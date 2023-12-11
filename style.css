@@ -743,6 +743,10 @@ footer{
     gap: 10%;
 }
 
+.left figure{
+    width: 45px;
+}
+
 
 
 }
@@ -929,12 +933,12 @@ footer{
 
 
     .function{
-        justify-content: space-between;
+        gap: 30px;
     }
 
 
     .left figure{
-        height: 100%;
+        width: 48px;
     }
 
 
